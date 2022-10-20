@@ -18,10 +18,10 @@ import java.sql.ResultSet;
  */
 public class ConnectionFactory {
     
-    private static final String DRIVER = "com.mysql.jbdc.Driver";
-    private static final String URL = "jbdc://localhost:3306/estacionamento";
-    private static final String USER = "root";
-    private static final String PASS = "";
+    public static final String DRIVER = "com.mysql.jdbc.Driver";
+    public static final String URL = "jdbc://localhost:3307/estacionamento";
+    public static final String USER = "root";
+    public static final String PASS = "";
     
     
     public static Connection getConnection() {
@@ -31,7 +31,7 @@ public class ConnectionFactory {
                 return DriverManager.getConnection(URL, USER, PASS);
         } catch (ClassNotFoundException | SQLException e){
             
-           throw new RuntimeException ("Erro na conexão: ", e);
+           throw new RuntimeException("Erro na conexão: ", e);
         }
            
             
