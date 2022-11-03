@@ -8,9 +8,13 @@ package model.dao;
 import connection.ConnectionFactory;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JOptionPane;
 import model.bean.Motorista;
+import model.bean.Vaga;
 
 /**
  *
@@ -48,6 +52,36 @@ public class MotoristaDAO {
         
         
     }
+      public List<Motorista> read(){
+        Connection con = ConnectionFactory.getConnection();
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+        List<Motorista> motoristas = new ArrayList<>();
+        try{
+            
+            stmt = con.prepareStatement("SELECT * FROM motorista;");
+            rs = stmt.executeQuery();
+            while(rs.next()){
+                Motorista m = new Motorista ();
+            m.setNomeCompleto(rs.getString("idNomeCompleto"));
+            m.setRG(rs.getInt("RG"));
+            m.setCPF(rs.getInt("CPF"));
+            m.setCelular(rs.getInt("Celular"));
+            m.setEmail(rs.getString("Email"));
+            m.setSenha(rs.getString("Senha"));
+            m.setGenero(rs.getString("genero"));
+            motoristas.add(m);
+            }
+     
+        
+    }catch (SQLException e){
+    throw new RuntimeException("Erro ao buscar os dados: ", e);
+}finally{
+    ConnectionFactory.closeConnection(con, stmt, rs);
     
+}
+    return motoristas;
+    
+}
 }
 

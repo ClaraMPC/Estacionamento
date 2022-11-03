@@ -40,11 +40,11 @@ public class JFCadastrarMotorista extends javax.swing.JFrame {
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
         jRadioButton3 = new javax.swing.JRadioButton();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        jTCelular = new javax.swing.JTextField();
+        jTRG = new javax.swing.JTextField();
+        jTCPF = new javax.swing.JTextField();
+        jTEmail = new javax.swing.JTextField();
+        jSenha = new javax.swing.JPasswordField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -114,20 +114,20 @@ public class JFCadastrarMotorista extends javax.swing.JFrame {
         jRadioButton3.setBackground(new java.awt.Color(204, 204, 255));
         jRadioButton3.setText("Outro");
 
-        jTextField2.setBackground(new java.awt.Color(204, 204, 255));
-        jTextField2.setText("jTextField2");
+        jTCelular.setBackground(new java.awt.Color(204, 204, 255));
+        jTCelular.setText("jTextField2");
 
-        jTextField3.setBackground(new java.awt.Color(204, 204, 255));
-        jTextField3.setText("jTextField3");
+        jTRG.setBackground(new java.awt.Color(204, 204, 255));
+        jTRG.setText("jTextField3");
 
-        jTextField4.setBackground(new java.awt.Color(204, 204, 255));
-        jTextField4.setText("jTextField4");
+        jTCPF.setBackground(new java.awt.Color(204, 204, 255));
+        jTCPF.setText("jTextField4");
 
-        jTextField5.setBackground(new java.awt.Color(204, 204, 255));
-        jTextField5.setText("jTextField5");
+        jTEmail.setBackground(new java.awt.Color(204, 204, 255));
+        jTEmail.setText("jTextField5");
 
-        jPasswordField1.setBackground(new java.awt.Color(204, 204, 255));
-        jPasswordField1.setText("jPasswordField1");
+        jSenha.setBackground(new java.awt.Color(204, 204, 255));
+        jSenha.setText("jPasswordField1");
 
         jButton1.setText("Salvar");
 
@@ -144,9 +144,9 @@ public class JFCadastrarMotorista extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTRG, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTCPF, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(96, 96, 96)
                                 .addComponent(jButton1)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -178,11 +178,11 @@ public class JFCadastrarMotorista extends javax.swing.JFrame {
                 .addGap(57, 57, 57)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
+                        .addComponent(jTCelular, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
                         .addComponent(jLabel8)
                         .addComponent(jLabel9)
-                        .addComponent(jTextField5))
-                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jTEmail))
+                    .addComponent(jSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -207,7 +207,7 @@ public class JFCadastrarMotorista extends javax.swing.JFrame {
                     .addComponent(jLabel8))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTCelular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTFNomeCompleto, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -229,22 +229,22 @@ public class JFCadastrarMotorista extends javax.swing.JFrame {
                                 .addGap(25, 25, 25)
                                 .addComponent(jLabel4)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTRG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(40, 40, 40)
                                 .addComponent(jLabel5)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTCPF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jButton1)
                                     .addComponent(jButton2)
                                     .addComponent(jButton3)))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(19, 19, 19)
-                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(39, 39, 39)
                         .addComponent(jLabel7)
                         .addGap(18, 18, 18)
-                        .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
@@ -259,11 +259,13 @@ public class JFCadastrarMotorista extends javax.swing.JFrame {
         Motorista m = new Motorista();
         MotoristaDAO dao = new MotoristaDAO();
         m.setNomeCompleto(jTFNomeCompleto.getText());
-        m.setRG(Integer.parseInt(jTFRG.getText()));
-        m.setNomeCompleto(jTFNomeCompleto.getText());
-        m.setNomeCompleto(jTFNomeCompleto.getText());
+        m.setRG(Integer.parseInt(jTRG.getText()));
+        m.setCPF(Integer.parseInt(jTCPF.getText()));
+        m.setCelular(Integer.parseInt(jTCelular.getText()));
+        m.setEmail(jTEmail.getText());
+        m.setSenha(jSenha.getText());
         
-        
+       
         
         
          if(jRBFeminino.isSelected()){
@@ -335,14 +337,14 @@ public class JFCadastrarMotorista extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;
+    private javax.swing.JPasswordField jSenha;
+    private javax.swing.JTextField jTCPF;
+    private javax.swing.JTextField jTCelular;
+    private javax.swing.JTextField jTEmail;
     private javax.swing.JTextField jTFNomeCompleto;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTRG;
     // End of variables declaration//GEN-END:variables
 }
