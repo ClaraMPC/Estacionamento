@@ -27,7 +27,6 @@ CREATE TABLE motorista (
  cpf int NOT NULL,
  celular int NOT NULL,
  email varchar(30) NOT NULL,
- senha varchar(30 NOT NULL,
- PRYMARY KEY(idMotorista));
- 
+ senha varchar(30) NOT NULL,
+ PRIMARY KEY(idMotorista));
 

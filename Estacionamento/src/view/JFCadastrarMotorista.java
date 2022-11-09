@@ -26,7 +26,7 @@ public class JFCadastrarMotorista extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup1 = new javax.swing.ButtonGroup();
+        bGGenero = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -37,17 +37,17 @@ public class JFCadastrarMotorista extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jTFNomeCompleto = new javax.swing.JTextField();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
+        jRBFeminino = new javax.swing.JRadioButton();
+        jRBMasculino = new javax.swing.JRadioButton();
+        jRBOutro = new javax.swing.JRadioButton();
         jTCelular = new javax.swing.JTextField();
         jTRG = new javax.swing.JTextField();
         jTCPF = new javax.swing.JTextField();
         jTEmail = new javax.swing.JTextField();
         jSenha = new javax.swing.JPasswordField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        jBtnSalvar = new javax.swing.JButton();
+        jBtnLimpar = new javax.swing.JButton();
+        jBtnCancelar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 0, 204));
@@ -93,47 +93,49 @@ public class JFCadastrarMotorista extends javax.swing.JFrame {
         jLabel9.setText("Email");
 
         jTFNomeCompleto.setBackground(new java.awt.Color(204, 204, 255));
-        jTFNomeCompleto.setText("jTextField1");
         jTFNomeCompleto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTFNomeCompletoActionPerformed(evt);
             }
         });
 
-        jRadioButton1.setBackground(new java.awt.Color(204, 204, 255));
-        jRadioButton1.setText("Feminino");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        jRBFeminino.setBackground(new java.awt.Color(204, 204, 255));
+        bGGenero.add(jRBFeminino);
+        jRBFeminino.setText("Feminino");
+        jRBFeminino.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                jRBFemininoActionPerformed(evt);
             }
         });
 
-        jRadioButton2.setBackground(new java.awt.Color(204, 204, 255));
-        jRadioButton2.setText("Masculino");
+        jRBMasculino.setBackground(new java.awt.Color(204, 204, 255));
+        bGGenero.add(jRBMasculino);
+        jRBMasculino.setText("Masculino");
 
-        jRadioButton3.setBackground(new java.awt.Color(204, 204, 255));
-        jRadioButton3.setText("Outro");
+        jRBOutro.setBackground(new java.awt.Color(204, 204, 255));
+        bGGenero.add(jRBOutro);
+        jRBOutro.setText("Outro");
 
         jTCelular.setBackground(new java.awt.Color(204, 204, 255));
-        jTCelular.setText("jTextField2");
 
         jTRG.setBackground(new java.awt.Color(204, 204, 255));
-        jTRG.setText("jTextField3");
 
         jTCPF.setBackground(new java.awt.Color(204, 204, 255));
-        jTCPF.setText("jTextField4");
 
         jTEmail.setBackground(new java.awt.Color(204, 204, 255));
-        jTEmail.setText("jTextField5");
 
         jSenha.setBackground(new java.awt.Color(204, 204, 255));
-        jSenha.setText("jPasswordField1");
 
-        jButton1.setText("Salvar");
+        jBtnSalvar.setText("Salvar");
+        jBtnSalvar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnSalvarActionPerformed(evt);
+            }
+        });
 
-        jButton2.setText("Limpar");
+        jBtnLimpar.setText("Limpar");
 
-        jButton3.setText("Cancelar");
+        jBtnCancelar.setText("Cancelar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -148,21 +150,20 @@ public class JFCadastrarMotorista extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jTCPF, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(96, 96, 96)
-                                .addComponent(jButton1)))
+                                .addComponent(jBtnSalvar)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel6)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton2)
+                        .addComponent(jBtnLimpar)
                         .addGap(32, 32, 32)
-                        .addComponent(jButton3)
+                        .addComponent(jBtnCancelar)
                         .addGap(37, 37, 37))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel5)
                             .addComponent(jLabel4)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jRadioButton3)
-                                .addGap(172, 172, 172)
+                                .addGap(225, 225, 225)
                                 .addComponent(jLabel7)))
                         .addGap(0, 0, Short.MAX_VALUE))))
             .addGroup(layout.createSequentialGroup()
@@ -173,16 +174,16 @@ public class JFCadastrarMotorista extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRadioButton1)
-                            .addComponent(jRadioButton2))))
+                            .addComponent(jRBFeminino)
+                            .addComponent(jRBMasculino)
+                            .addComponent(jRBOutro))))
                 .addGap(57, 57, 57)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jTCelular, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
-                        .addComponent(jLabel8)
-                        .addComponent(jLabel9)
-                        .addComponent(jTEmail))
-                    .addComponent(jSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jSenha)
+                    .addComponent(jTCelular, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel9)
+                    .addComponent(jTEmail))
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -206,27 +207,25 @@ public class JFCadastrarMotorista extends javax.swing.JFrame {
                     .addComponent(jLabel2)
                     .addComponent(jLabel8))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jTCelular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTFNomeCompleto, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                    .addComponent(jTFNomeCompleto, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(jLabel9))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton1)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jRBFeminino)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jRBMasculino, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jRBOutro)
+                        .addGap(33, 33, 33)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel6)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(195, 195, 195)
-                                .addComponent(jLabel6))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(5, 5, 5)
-                                .addComponent(jRadioButton2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jRadioButton3)
-                                .addGap(25, 25, 25)
                                 .addComponent(jLabel4)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jTRG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -235,9 +234,9 @@ public class JFCadastrarMotorista extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jTCPF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButton1)
-                                    .addComponent(jButton2)
-                                    .addComponent(jButton3)))))
+                                    .addComponent(jBtnSalvar)
+                                    .addComponent(jBtnLimpar)
+                                    .addComponent(jBtnCancelar)))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(19, 19, 19)
                         .addComponent(jTEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -255,8 +254,12 @@ public class JFCadastrarMotorista extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTFNomeCompletoActionPerformed
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
-        Motorista m = new Motorista();
+    private void jRBFemininoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRBFemininoActionPerformed
+        
+    }//GEN-LAST:event_jRBFemininoActionPerformed
+
+    private void jBtnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnSalvarActionPerformed
+    Motorista m = new Motorista();
         MotoristaDAO dao = new MotoristaDAO();
         m.setNomeCompleto(jTFNomeCompleto.getText());
         m.setRG(Integer.parseInt(jTRG.getText()));
@@ -264,14 +267,18 @@ public class JFCadastrarMotorista extends javax.swing.JFrame {
         m.setCelular(Integer.parseInt(jTCelular.getText()));
         m.setEmail(jTEmail.getText());
         m.setSenha(jSenha.getText());
+        jBtnCancelar = new javax.swing.JButton();
+        jBtnLimpar = new javax.swing.JButton();
+        jBtnSalvar = new javax.swing.JButton();
         
        
+        
         
         
          if(jRBFeminino.isSelected()){
           m.setGenero("Feminino");
           
-      }  if(jRBMasculino.isSelected()){
+      } else if(jRBMasculino.isSelected()){
           m.setGenero ("Masculino");
       }
       else if (jRBOutro.isSelected()){
@@ -286,7 +293,7 @@ public class JFCadastrarMotorista extends javax.swing.JFrame {
       dao.create(m);
         // TODO add your handling code here:
     
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+    }//GEN-LAST:event_jBtnSalvarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -324,10 +331,10 @@ public class JFCadastrarMotorista extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.ButtonGroup bGGenero;
+    private javax.swing.JButton jBtnCancelar;
+    private javax.swing.JButton jBtnLimpar;
+    private javax.swing.JButton jBtnSalvar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -337,9 +344,9 @@ public class JFCadastrarMotorista extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
+    private javax.swing.JRadioButton jRBFeminino;
+    private javax.swing.JRadioButton jRBMasculino;
+    private javax.swing.JRadioButton jRBOutro;
     private javax.swing.JPasswordField jSenha;
     private javax.swing.JTextField jTCPF;
     private javax.swing.JTextField jTCelular;

@@ -28,7 +28,7 @@ public class MotoristaDAO {
             
             try {
                 
-                stmt = con.prepareStatement("INSERT INTO motorista( nomeCompleto, genero, RG, CPF, celular, email, senha) VALUES (?,?,?)");
+                stmt = con.prepareStatement("INSERT INTO motorista( nome, genero, RG, CPF, celular, email, senha) VALUES (?,?,?,?,?,?,?)");
                 stmt.setString(1, m.getNomeCompleto());
                 stmt.setString(2, m.getGenero());
                 stmt.setInt(3, m.getRG());
@@ -63,7 +63,8 @@ public class MotoristaDAO {
             rs = stmt.executeQuery();
             while(rs.next()){
                 Motorista m = new Motorista ();
-            m.setNomeCompleto(rs.getString("idNomeCompleto"));
+            m.setIdMotorista(rs.getInt("idMotorista"));
+            m.setNomeCompleto(rs.getString("nome"));
             m.setRG(rs.getInt("RG"));
             m.setCPF(rs.getInt("CPF"));
             m.setCelular(rs.getInt("Celular"));
@@ -81,7 +82,29 @@ public class MotoristaDAO {
     
 }
     return motoristas;
-    
+   }
+      
+public void delete(Motorista m){
+        Connection con = ConnectionFactory.getConnection();
+        PreparedStatement stmt = null;
+        
+        
+        try{
+            stmt = con.prepareStatement("Delete from MOTORISTA WHERE idMotorista=?");
+            stmt.setInt(1,m.getIdMotorista());
+            stmt.executeUpdate();
+            
+            
+            JOptionPane.showMessageDialog(null, "Motorista excluída com sucesso!");
+        }catch(SQLException e){
+            JOptionPane.showMessageDialog(null, "Erro ao excluir: " + e);
+        
+        }finally{
+            ConnectionFactory.closeConnection(con, stmt);
+        }
+    }
+
 }
-}
+
+
 
