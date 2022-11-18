@@ -74,6 +74,11 @@ public class JFListarVaga extends javax.swing.JFrame {
         });
 
         jBtnEditar.setText("Editar Vaga");
+        jBtnEditar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnEditarActionPerformed(evt);
+            }
+        });
 
         jBtnExcluir.setText("Excluir Vaga");
         jBtnExcluir.addActionListener(new java.awt.event.ActionListener() {
@@ -144,6 +149,18 @@ public class JFListarVaga extends javax.swing.JFrame {
         readJTable();
     }//GEN-LAST:event_jBtnExcluirActionPerformed
 
+    private void jBtnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnEditarActionPerformed
+
+if(jTVaga.getSelectedRow() != -1) {
+    int vagaSelecionada = (int) jTVaga.getValueAt (jTVaga.getSelectedRow(), 0);
+JFAtualizarVaga av = new JFAtualizarVaga(vagaSelecionada);
+av.setVisible(true);
+}else{
+JOptionPane.showMessageDialog(null, "Selecione uma vaga!", "Erro", JOptionPane.ERROR_MESSAGE);
+// TODO add your handling code here:
+    }//GEN-LAST:event_jBtnEditarActionPerformed
+  readJTable();
+    }
     
     public void readJTable(){
         DefaultTableModel modelo =  (DefaultTableModel) jTVaga.getModel();
