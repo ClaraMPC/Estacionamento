@@ -57,7 +57,7 @@ public class VagaDAO {
             stmt = con.prepareStatement("SELECT * FROM vaga;");
             rs = stmt.executeQuery();
             while(rs.next()){
-                Vaga v = new Vaga();
+            Vaga v = new Vaga();
             v.setIdVaga(rs.getInt("idVaga"));
             v.setNumero(rs.getInt("numero"));
             v.setRua(rs.getString("rua"));

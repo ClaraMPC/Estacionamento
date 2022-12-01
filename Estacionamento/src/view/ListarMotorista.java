@@ -122,47 +122,53 @@ public class ListarMotorista extends javax.swing.JFrame {
     }//GEN-LAST:event_jBtnCadastrarActionPerformed
 
     private void jBtnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnEditarActionPerformed
-        // TODO add your handling code here:
+        if (jTMotorista.getSelectedRow() != -1) {
+            int motoristaSelecionada = (int) jTMotorista.getValueAt(jTMotorista.getSelectedRow(), 0);
+            JFAtualizarMotorista am = new JFAtualizarMotorista(motoristaSelecionada);
+            am.setVisible(true);
+        } else {
+            JOptionPane.showMessageDialog(null, "Selecione um motorista!", "Erro", JOptionPane.ERROR_MESSAGE);
+// TODO add your handling code here:
+        }
+        readJTable();        // TODO add your handling code here:
     }//GEN-LAST:event_jBtnEditarActionPerformed
 
     private void jBtnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnExcluirActionPerformed
- if(jTMotorista.getSelectedRow() != -1){
-            
-            int opcao = JOptionPane.showConfirmDialog(null, "Deseja excluir o motorista selecionado?","Exclusão", JOptionPane.YES_NO_OPTION);
-            if(opcao == 0){
+        if (jTMotorista.getSelectedRow() != -1) {
+
+            int opcao = JOptionPane.showConfirmDialog(null, "Deseja excluir o motorista selecionado?", "Exclusão", JOptionPane.YES_NO_OPTION);
+            if (opcao == 0) {
                 MotoristaDAO dao = new MotoristaDAO();
                 Motorista v = new Motorista();
-                v.setIdMotorista((int)jTMotorista.getValueAt(jTMotorista.getSelectedRow(), 0));
+                v.setIdMotorista((int) jTMotorista.getValueAt(jTMotorista.getSelectedRow(), 0));
                 dao.delete(v);
             }
-        }else{
-            JOptionPane.showMessageDialog(null,"Selecione um motorista!","Erro", JOptionPane.ERROR_MESSAGE);
+        } else {
+            JOptionPane.showMessageDialog(null, "Selecione um motorista!", "Erro", JOptionPane.ERROR_MESSAGE);
         }
         readJTable();
-    }                                           
+    }
 
-    
-    public void readJTable(){
-        DefaultTableModel modelo =  (DefaultTableModel) jTMotorista.getModel();
-        
+    public void readJTable() {
+        DefaultTableModel modelo = (DefaultTableModel) jTMotorista.getModel();
+
         modelo.setNumRows(0);
         MotoristaDAO dao = new MotoristaDAO();
-        for(Motorista m: dao.read()){
+        for (Motorista m : dao.read()) {
             modelo.addRow(new Object[]{
-            m.getIdMotorista(),
-            m.getNomeCompleto(),
-            m.getCPF(),
-            m.getEmail(),
-            m.getCelular()
+                m.getIdMotorista(),
+                m.getNomeCompleto(),
+                m.getCPF(),
+                m.getEmail(),
+                m.getCelular()
             });
-                        
-            
+
         }
-                // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_jBtnExcluirActionPerformed
 
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
-    readJTable();        // TODO add your handling code here:
+        readJTable();        // TODO add your handling code here:
     }//GEN-LAST:event_formWindowActivated
 
     /**
