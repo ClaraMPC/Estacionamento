@@ -42,6 +42,9 @@ public class JFAtualizarVaga extends javax.swing.JFrame {
     private void initComponents() {
 
         bGTipoVaga = new javax.swing.ButtonGroup();
+        entityManager1 = java.beans.Beans.isDesignTime() ? null : javax.persistence.Persistence.createEntityManagerFactory(null).createEntityManager();
+        jPanel1 = new javax.swing.JPanel();
+        jOptionPane1 = new javax.swing.JOptionPane();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jTFNumero = new javax.swing.JTextField();
@@ -56,7 +59,19 @@ public class JFAtualizarVaga extends javax.swing.JFrame {
         lblIdVaga = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Atualizar Vaga");
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(102, 204, 0));
@@ -226,11 +241,13 @@ vdao.update(v);
     }//GEN-LAST:event_jBtnSalvarActionPerformed
 
     private void jBtnLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnLimparActionPerformed
-        // TODO add your handling code here:
+       jTFRua.setText("");
+       jTFNumero.setText("");
+       bGTipoVaga.clearSelection();
     }//GEN-LAST:event_jBtnLimparActionPerformed
 
     private void jBtnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnCancelarActionPerformed
-        // TODO add your handling code here:
+ dispose();        
     }//GEN-LAST:event_jBtnCancelarActionPerformed
 
     /**
@@ -272,6 +289,7 @@ vdao.update(v);
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup bGTipoVaga;
+    private javax.persistence.EntityManager entityManager1;
     private javax.swing.JButton jBtnCancelar;
     private javax.swing.JButton jBtnLimpar;
     private javax.swing.JButton jBtnSalvar;
@@ -280,6 +298,8 @@ vdao.update(v);
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JOptionPane jOptionPane1;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JRadioButton jRBObliqua;
     private javax.swing.JRadioButton jRBParalela;
     private javax.swing.JTextField jTFNumero;

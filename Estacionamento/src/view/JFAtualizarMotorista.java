@@ -67,7 +67,8 @@ public class JFAtualizarMotorista extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jTFGenero = new javax.swing.JTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Atualizar Motorista");
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel1.setText("Atualizar Motorista");
@@ -107,6 +108,11 @@ public class JFAtualizarMotorista extends javax.swing.JFrame {
         });
 
         jBtnCancelar.setText("Cancelar");
+        jBtnCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnCancelarActionPerformed(evt);
+            }
+        });
 
         lblIdMotorista.setText("jLabel9");
 
@@ -258,8 +264,18 @@ public class JFAtualizarMotorista extends javax.swing.JFrame {
     }//GEN-LAST:event_jTFGeneroActionPerformed
 
     private void jBtnLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnLimparActionPerformed
-        // TODO add your handling code here:
+       jTFNomeCompleto.setText("");
+        jTFGenero.setText("");
+        jTCelular.setText("");
+        jTRG.setText("");
+        jTCPF.setText("");
+        jemail.setText("");
+        jSenha.setText("");
     }//GEN-LAST:event_jBtnLimparActionPerformed
+
+    private void jBtnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnCancelarActionPerformed
+      dispose();
+    }//GEN-LAST:event_jBtnCancelarActionPerformed
 
     /**
      * @param args the command line arguments

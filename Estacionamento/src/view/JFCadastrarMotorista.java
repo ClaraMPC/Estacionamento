@@ -49,7 +49,8 @@ public class JFCadastrarMotorista extends javax.swing.JFrame {
         jBtnLimpar = new javax.swing.JButton();
         jBtnCancelar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Cadastrar Motorista");
         setBackground(new java.awt.Color(255, 0, 204));
 
         jLabel1.setBackground(new java.awt.Color(255, 204, 204));
@@ -134,8 +135,18 @@ public class JFCadastrarMotorista extends javax.swing.JFrame {
         });
 
         jBtnLimpar.setText("Limpar");
+        jBtnLimpar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnLimparActionPerformed(evt);
+            }
+        });
 
         jBtnCancelar.setText("Cancelar");
+        jBtnCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnCancelarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -294,6 +305,22 @@ public class JFCadastrarMotorista extends javax.swing.JFrame {
         // TODO add your handling code here:
     
     }//GEN-LAST:event_jBtnSalvarActionPerformed
+
+    private void jBtnLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnLimparActionPerformed
+        jTFNomeCompleto.setText("");
+        jRBFeminino.setText("");
+        jRBMasculino.setText("");
+        jRBOutro.setText("");
+        jTCelular.setText("");
+        jTRG.setText("");
+        jTCPF.setText("");
+        jTEmail.setText("");
+        jSenha.setText("");
+    }//GEN-LAST:event_jBtnLimparActionPerformed
+
+    private void jBtnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnCancelarActionPerformed
+        dispose();
+    }//GEN-LAST:event_jBtnCancelarActionPerformed
 
     /**
      * @param args the command line arguments
